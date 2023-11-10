@@ -1,0 +1,22 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(179, 206, 204);
+}
+
+#container {
+    display: grid;
+    grid-template: repeat(16, 1fr)/repeat(16, 1fr);
+    max-width: 500px;
+    height: 500px;
+    border: 2px solid #d6a110;
+    margin-left: 20px;
+}
+
+
+.grid-cell {
+    border: none;
+}
