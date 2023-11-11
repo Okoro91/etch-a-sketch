@@ -9,7 +9,6 @@ body{
 
 #container {
     display: grid;
-    grid-template: repeat(16, 1fr)/repeat(16, 1fr);
     max-width: 500px;
     height: 500px;
     border: 2px solid #d6a110;
@@ -17,7 +16,7 @@ body{
 }
 
 .grid-cell {
-    border: none;
+    border: 1px solid red;
 }
 .active {
     background-color: rgb(240, 100, 20); 
