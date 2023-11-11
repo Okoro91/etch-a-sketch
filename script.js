@@ -73,7 +73,7 @@ function cellColor(cells) {
 
 function updateGridSize() {
   const newValue = gridSize.value;
-  gridText.textContent = newValue;
+  gridText.textContent = `${newValue} x ${newValue}`;;
   sketchGrid(newValue);
 }
 

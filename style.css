@@ -5,6 +5,8 @@
 
 body{
     background-color: #d3e4e3;
+    margin: 0;
+    padding: 0;
 }
 
 #container {
@@ -16,8 +18,9 @@ body{
 }
 
 .grid-cell {
-    border: 1px solid red;
+    border: none;
 }
+
 .active {
     background-color: rgb(240, 100, 20); 
   }
