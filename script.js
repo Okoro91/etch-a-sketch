@@ -21,7 +21,7 @@ for (let i = 0; i < gridCell * gridCell; i++){
 
 
 
-sketchGrid(32);
+sketchGrid(16);
 
 
 
@@ -58,14 +58,12 @@ let eraser = (event) => {
 const rainbowButton = document.querySelector('#rainbow');
 const colorButton = document.querySelector('#color-change');
 const eraseButton = document.querySelector('#erase');
-const clearButton = document.querySelector('#clear');
+
 
 rainbowButton.addEventListener('click', () => {
   rainbowButton.classList.add('active');
   colorButton.classList.remove('active');
   eraseButton.classList.remove('active');
-  clearButton.classList.remove('active');
-    cellColor();
   cellColor();
 });
 
@@ -73,8 +71,6 @@ colorButton.addEventListener('click', () => {
   rainbowButton.classList.remove('active');
   colorButton.classList.add('active');
   eraseButton.classList.remove('active');
-  clearButton.classList.remove('active');
-    cellColor();
   cellColor();
 });
 
@@ -83,15 +79,20 @@ eraseButton.addEventListener('click', () => {
   colorButton.classList.remove('active');
   eraseButton.classList.add('active');
   cellColor();
-  clearButton.classList.remove('active');
-    cellColor();
 });
-
 
 
 const cellColor = function () {
     const activeButton = document.querySelector('.active');
 
+    // Remove existing event listeners from all cells
+    cells.forEach(cell => {
+        cell.removeEventListener('mouseover', colorPicker);
+        cell.removeEventListener('mouseover', rainbow);
+        cell.removeEventListener('mouseover', eraser);
+    });
+
+    // Add new event listener based on the active button
     if (activeButton && activeButton.id === 'color-change') {
         cells.forEach(cell => {
             cell.addEventListener('mouseover', colorPicker);
@@ -110,7 +111,7 @@ const cellColor = function () {
 
 
 // clear all cell function
-
+const clearButton = document.querySelector('#clear');
 clearButton.addEventListener('click', () => {
     clear();
   });
