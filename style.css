@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: rgb(211, 228, 227);
+    background-color: #d3e4e3;
 }
 
 #container {
@@ -19,7 +19,9 @@ body{
 .grid-cell {
     border: none;
 }
-
+.active {
+    background-color: rgb(240, 100, 20); 
+  }
 
 #settings {
     display: block;
