@@ -41,7 +41,7 @@ event.target.style.backgroundColor = colorChoice.value;
 // eraser cell 
 
 let eraser = (event) => {
-event.target.style.backgroundColor = '#d3e4e3';
+event.target.style.backgroundColor = '#eff5f4';
 }
 
 
@@ -120,3 +120,6 @@ function clear() {
     cell.style.backgroundColor = '';
   });
 }
+
+
+
